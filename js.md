@@ -1,13 +1,13 @@
 
 # repeat an array n times
 
-```
+```js
 new Array(100).fill([1, 2, 3]).flat()
 ```
 
 # async functions with Array.map
 
-```
+```js
 const arr = [1, 2, 3];
 
 const asyncRes = await Promise.all(arr.map(async (i) => {
@@ -18,24 +18,24 @@ const asyncRes = await Promise.all(arr.map(async (i) => {
 
 # 指数操作符
 
-```
+```js
 2**10; // 1024
 ```
 # Object.values()
 
-```
+```js
 Object.values({a: 1, b: 2, c: 3}); // [1, 2, 3]
 ```
 
 # Object.entries()
 
-```
+```js
 Object.entries({a: 1, b: 2, c: 3}); // [["a", 1], ["b", 2], ["c", 3]]
 ```
 
 # String padding
 
-```
+```js
 // padStart
 'hello'.padStart(10); // "     hello"
 // padEnd
@@ -45,7 +45,7 @@ Object.entries({a: 1, b: 2, c: 3}); // [["a", 1], ["b", 2], ["c", 3]]
 
 # 异步迭代
 
-```
+```js
 async function process(array) {
   for await (let i of array) {
     // doSomething(i);
@@ -56,7 +56,7 @@ async function process(array) {
 
 # Nullish coalescing Operator
 
-```
+```js
 let user = {
     u1: 0,
     u2: false,
@@ -72,7 +72,7 @@ let u5 = user.u5 ?? '用户5'  // ''
 
 # Optional chaining
 
-```
+```js
 let user = {}
 let u1 = user.childer.name // TypeError: Cannot read property 'name' of undefined
 let u1 = user.childer?.name // undefined
@@ -80,7 +80,7 @@ let u1 = user.childer?.name // undefined
 
 # Promise.allSettled
 
-```
+```js
 const promise1 = Promise.resolve(3);
 const promise2 = 42;
 const promise3 = new Promise((resolve, reject) => reject('我是失败的Promise_1'));
@@ -94,7 +94,7 @@ Promise.allSettled(promiseList)
 
 # await with for...of
 
-```
+```js
 async function process(array) {
   for await (let i of array) {
     // doSomething(i);
@@ -103,7 +103,7 @@ async function process(array) {
 ```
 
 # 数组去重
-```
+```js
 const removeDuplicates = (arr) => [...new Set(arr)];
     
 console.log(removeDuplicates([1, 2, 3, 3, 4, 4, 5, 5, 6]));
