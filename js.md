@@ -91,6 +91,8 @@ Promise.allSettled(promiseList)
   console.log(values)
 });
 ```
+![image](https://user-images.githubusercontent.com/1579516/115391013-871e8480-a211-11eb-8564-a913d99f9b41.png)
+
 
 # await with for...of
 
@@ -133,5 +135,3 @@ Object.fromEntries(new URLSearchParams(window.location.search))
 // Result: { search : "easy", page : 3 }
 
 ```
-
-![image](https://user-images.githubusercontent.com/1579516/115391013-871e8480-a211-11eb-8564-a913d99f9b41.png)
