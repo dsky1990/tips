@@ -92,19 +92,16 @@ Promise.allSettled(promiseList)
 });
 ```
 
-# Object.values()
+# await with for...of
 
 ```
-Object.values({a: 1, b: 2, c: 3}); // [1, 2, 3]
-
+async function process(array) {
+  for await (let i of array) {
+    // doSomething(i);
+  }
+}
 ```
 
-# Object.entries()
-
-```
-Object.entries({a: 1, b: 2, c: 3}); // [["a", 1], ["b", 2], ["c", 3]]
-
-```
 
 
 ![image](https://user-images.githubusercontent.com/1579516/115391013-871e8480-a211-11eb-8564-a913d99f9b41.png)
