@@ -110,6 +110,28 @@ console.log(removeDuplicates([1, 2, 3, 3, 4, 4, 5, 5, 6]));
 // Result: [ 1, 2, 3, 4, 5, 6 ]
 ```
 
+# 从 URL 获取查询参数
+```js
+const getParameters = (URL) => {
+  URL = JSON.parse(
+    '{"' +
+      decodeURI(URL.split("?")[1])
+        .replace(/"/g, '\\"')
+        .replace(/&/g, '","')
+        .replace(/=/g, '":"') +
+      '"}'
+  );
+  return JSON.stringify(URL);
+};
 
+getParameters(window.location);
+// Result: { search : "easy", page : 3 }
+
+---
+
+Object.fromEntries(new URLSearchParams(window.location.search))
+// Result: { search : "easy", page : 3 }
+
+```
 
 ![image](https://user-images.githubusercontent.com/1579516/115391013-871e8480-a211-11eb-8564-a913d99f9b41.png)
